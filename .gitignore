@@ -1,0 +1,9 @@
+# Ignore compiled iverilog simulation executables
+sim/*
+!sim/.gitkeep
+
+# Ignore Waveform VCD files anywhere in the project
+*.vcd
+
+# Ignore OS-specific clutter
+.DS_Store
