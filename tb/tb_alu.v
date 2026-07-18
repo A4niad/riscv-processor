@@ -19,7 +19,7 @@ module tb_alu;
         .zero(zero)
     );
 
-    task check;
+    task automatic check;
         input [31:0] expected;
         input [63:0] test_name;
         begin
@@ -98,4 +98,4 @@ module tb_alu;
 
         $finish;
     end
-endmodule                    
+endmodule

@@ -18,6 +18,6 @@
 `define I_JALR_TYPE  7'b1100111
 `define S_TYPE       7'b0100011
 `define B_TYPE       7'b1100011
-`define U_LUI_TYPE   7'0110111
+`define U_LUI_TYPE   7'b0110111
 `define U_AUPIC_TYPE 7'b0010111
 `define J_TYPE       7'b1101111
