@@ -19,7 +19,7 @@ module control (
             `I_TYPE:       {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b110000010;
             `I_LW_TYPE:    {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b110110000;
             `I_JALR_TYPE:  {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b110000100;
-            `S_TYPE:       {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b010100000;
+            `S_TYPE:       {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b011000000;
             `B_TYPE:       {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b000001001;
             `U_LUI_TYPE:   {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b110000000;
             `U_AUPIC_TYPE: {reg_write, alu_src, mem_write, mem_read, mem_to_reg, branch, jump, alu_op} = 9'b110000000;
