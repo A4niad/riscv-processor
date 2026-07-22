@@ -37,6 +37,10 @@ sim_imem:
 	$(IV) -o $(SIM)/tb_imem $(TB)/tb_imem.v $(SRC)/imem.v $(SRC)/defines.v
 	$(VVP) $(SIM)/tb_imem
 
+sim_dmem:
+	$(IV) -o $(SIM)/tb_dmem $(TB)/tb_dmem.v $(SRC)/dmem.v $(SRC)/defines.v
+	$(VVP) $(SIM)/tb_dmem
+
 # Run all tests in sequence
 sim_all:
 	$(MAKE) sim_alu
@@ -69,6 +73,9 @@ wave_pc_reg:
 
 wave_imem:
 	gtkwave $(SIM)/waves_imem.vcd
+
+wave_dmem:
+	gtkwave $(SIM)/waves_dmem.vcd
 
 # ── Cleanup ─────────────────────────────────────────────────
 

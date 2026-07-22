@@ -1,0 +1,23 @@
+// src/dmem.v
+`include "src/defines.v"
+
+module dmem(
+    input         clk,
+    input         mem_read,
+    input         mem_write,
+    input  [31:0] addr,
+    input  [31:0] write_data,
+    output [31:0] read_data
+);
+
+    reg [31:0] mem [0:255];
+
+    assign read_data = mem_read ? mem[addr[31:2]] : 32'b0;
+
+    always @(posedge clk) begin
+        if (mem_write) begin
+            mem[addr[31:2]] = write_data;
+        end
+    end
+
+endmodule
