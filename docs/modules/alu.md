@@ -33,5 +33,5 @@ The result of the operation is stored in `result`.
 
 ## Design Notes
 
-The `zero` flag simply checks if `result == 0`.
+The `zero` flag simply checks if `result == 0`.  
 In case of an invalid `alu_op` code, the result is set to 0
