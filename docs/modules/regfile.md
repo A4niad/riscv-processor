@@ -19,7 +19,7 @@ Creates, stores, and handles read/write operations for all general purpose regis
 ## Functionality
 
 This module creates the 32 general purpose registers stored in `registers`. The contents of these registers can be read and written to. They can also all be reset easily.  
-Reading is done asynchronously and is immediately available upon passing the requested address in the necessary field.
+Reading is done asynchronously and is immediately available upon passing the requested address in the necessary field.  
 Writing is done synchronously and occurs on every positive edge of the input clock signal. It is performed by using the `rd_addr` and `rd_data` variables.
 A reset occurs on the next positive edge of the input clock signal if `reset` is held `HIGH`
 
