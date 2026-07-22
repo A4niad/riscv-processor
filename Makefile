@@ -29,6 +29,10 @@ sim_alu_control:
 	$(IV) -o $(SIM)/tb_alu_control $(TB)/tb_alu_control.v $(SRC)/alu_control.v $(SRC)/defines.v
 	$(VVP) $(SIM)/tb_alu_control
 
+sim_pc_reg:
+	$(IV) -o $(SIM)/tb_pc_reg $(TB)/tb_pc_reg.v $(SRC)/pc_reg.v $(SRC)/defines.v
+	$(VVP) $(SIM)/tb_pc_reg
+
 # Run all tests in sequence
 sim_all:
 	$(MAKE) sim_alu
@@ -36,6 +40,7 @@ sim_all:
 	$(MAKE) sim_imm_gen
 	${MAKE} sim_control
 	${MAKE} sim_alu_control
+	${MAKE} sim_pc_reg
 
 # ── Waveforms ───────────────────────────────────────────────
 
@@ -53,6 +58,9 @@ wave_control:
 
 wave_alu_control:
 	gtkwave $(SIM)/waves_alu_control.vcd
+
+wave_pc_reg:
+	gtkwave ${SIM}/waves_pc_reg.vcd
 
 # ── Cleanup ─────────────────────────────────────────────────
 
